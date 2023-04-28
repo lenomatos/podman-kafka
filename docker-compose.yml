@@ -40,3 +40,4 @@ services:
     entrypoint: sh -c "sleep 10 && kafka-topics --create --topic test --replication-factor 1 --partitions 1 --bootstrap-server kafka:9092"
     networks:
       - kafka
+    #entrypoint: sh -c "sleep 10 && kafka-topics --create --topic test --replication-factor 1 --partitions 1 --bootstrap-server kafka:9092 && cat /path/to/json_file.json | kafka-console-producer --topic test --bootstrap-server kafka:9092"
